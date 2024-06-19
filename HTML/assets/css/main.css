@@ -23,10 +23,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root{
-    --purple: #4B382A;
-    --black: #F5F5DC;
-    --white: #333333;
-    --grey: #0A0E01;
+    --purple: #A65F3C;
+    --black: #EAE7DC;
+    --white: #4e3e08;
+    --green: #0A0E01;
 }
 
 *{
@@ -177,7 +177,8 @@ header{
 
 header.sticky{
     border-bottom: 0.1rem solid var(--grey);
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 216, 168, 0.6)
+    ;
 }
 
 header .logo h2{
@@ -189,14 +190,15 @@ header .logo h2{
 }
 
 header .navbar a{
-    color: var(--white);
+    color: #222;
     font-size: 1.8rem;
     margin-left: 1rem;
 }
 
 header .navbar a:hover,
 header .navbar a.active{
-    color: var(--purple);
+    color: #8C2F39;
+    text-decoration: underline;
 }
 
 header #menu-btn{
@@ -255,8 +257,8 @@ header #menu-btn:hover{
 }
 
 .home .image img{
-    height: 40rem;
-    width: 40rem;
+    height: 50rem;
+    width: 50rem;
     border-radius: 50% 50% 50% 50% / 30% 30% 70% 70% ;
     object-fit:cover;
 }
@@ -559,7 +561,7 @@ header #menu-btn:hover{
 }
 
 .experience-item span{
-    background: #222;
+    background: #a56c4f;
     color: var(--white);
     padding: 0.5rem 1.5rem;
     font-size: 1.8rem;
