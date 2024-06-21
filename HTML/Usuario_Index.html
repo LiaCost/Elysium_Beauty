@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elysium Beauty</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
     <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/lib/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/lib/boxicons/css/boxicons.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/index.css">
+   
  
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 </head>
-<body>   
+<body style="background-color: #EAE7DC;">   
   
 
 <section class="maneger-page-section">
     <div  class="container page-maneger"> 
 
         <div class="add-user-button">
-            <h1 class="section-title cliente-title-maneger">Gerenciamento de Usuários</h1>
+            <br />
+            <h3 class="section-title cliente-title-maneger">Gerenciamento de Usuários</h3>
             <br />
         </div>
 
@@ -31,7 +34,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-group mb-4">
-                        <input id="filtro" type="text" class="form-control" placeholder="Pesquisar Produtos..." aria-label="Filtrar" aria-describedby="basic-addon2">
+                        <input id="filtro" type="text" placeholder="Pesquisar Produtos..." aria-label="Filtrar" aria-describedby="basic-addon2">
                     </div>
                 </div>
                 <div class="col-md-6 text-md-end">
@@ -50,37 +53,37 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Nome</th>
-                        <th>Senha</th>
-                        <th>Email</th>
-                        <th>Telefone</th>
-                        <th>Tipo de Usuário</th>
-                        <th class="editar">Editar</th>
-                        <th class="excluir">Excluir</th>
+                        <th style="color: #EAE7DC;">#</th>
+                        <th style="color: #EAE7DC;">Nome</th>
+                        <th style="color: #EAE7DC;">Senha</th>
+                        <th style="color: #EAE7DC;">Email</th>
+                        <th style="color: #EAE7DC;">Telefone</th>
+                        <th style="color: #EAE7DC;">Tipo de Usuário</th>
+                        <th class="editar" style="color: #EAE7DC;">Editar</th>
+                        <th class="excluir" style="color: #EAE7DC;">Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
                     
                         <tr id="@item.Id">
-                            <td>@item.Id</td>
-                            <td>@item.Nome</td>
-                            <td>@item.Senha</td>
-                            <td>@item.Email</td>
-                            <td>@item.Telefone</td>
+                            <td style="color: #EAE7DC;">@item.Id</td>
+                            <td style="color: #EAE7DC;">@item.Nome</td>
+                            <td style="color: #EAE7DC;">@item.Senha</td>
+                            <td style="color: #EAE7DC;">@item.Email</td>
+                            <td style="color: #EAE7DC;">@item.Telefone</td>
                             <td>
                               
-                                    <span>Administrador</span>
+                                    <span style="color: #EAE7DC;">Administrador</span>
                                 
                             </td>
                             <td class="text-center">
-                                <button class="btn btn-default" onclick="definirEdt('@item.Id', '@item.Nome', '@item.Email','@item.Senha', '@item.TipoUsuario','@item.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario">
+                                <button class="btn btn-default" onclick="definirEdt('@item.Id', '@item.Nome', '@item.Email','@item.Senha', '@item.TipoUsuario','@item.Telefone')" data-bs-toggle="modal" data-bs-target="#EditarUsuario" style="color: #EAE7DC;">
                                     <i class="fa fa-edit"></i>
                                 </button>
                             </td>
                             <td class="text-center">
-                                <button class="btn btn-default" onclick="definirExc('@item.Id', '@item.Nome', '@item.Email', '@item.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario">
-                                    <i class="fa fa-trash text-danger"></i>
+                                <button class="btn btn-default" onclick="definirExc('@item.Id', '@item.Nome', '@item.Email', '@item.Telefone')" data-bs-toggle="modal" data-bs-target="#ExcluirUsuario" style="color: #EAE7DC;">
+                                    <i class="fa fa-trash" ></i>
                                 </button>
                             </td>
                         </tr>
@@ -94,8 +97,8 @@
     <div class="modal fade" id="EditarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #8B4513;  border-color: #8B4513;">
-                    <h1 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h1>
+                <div class="modal-header" style="background-color: #592919;  border-color: #8B4513;">
+                    <h3 class="modal-title" id="exampleModalLabel">Editar Cliente</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -141,9 +144,9 @@
 
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" onclick=" AlterarUsuario()">Salvar</button>
+                <div class="modal-footer" style="background-color: #592919;  border-color: #8B4513;">
+                    <button type="button" class="nav-link active btn  btn-block" data-bs-dismiss="modal" style="background-color: #592919; color: white;">Fechar</button>
+                    <button type="button" class="nav-link active btn  btn-block" onclick="InserirUsuario()" style="background-color: #592919; color: white;">Salvar</button>
                 </div>
             </div>
         </div>
@@ -152,8 +155,8 @@
     <div class="modal fade" id="ExcluirUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header" style="background-color: #8B4513;  border-color: #8B4513;">
-                    <h1 class="modal-title" id="exampleModalLabel">Excluir Cliente</h1>
+                <div class="modal-header" style="background-color: #592919;  border-color: #8B4513;">
+                    <h3 class="modal-title" id="exampleModalLabel">Excluir Cliente</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -176,9 +179,9 @@
                         <input type="hidden" id="IdExc" class="form-control" placeholder="Digite seu nome..." readonly>
 
                     </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" onclick="ExcluirUsuario()" class="btn btn-primary">Excluir</button>
+                    <div class="modal-footer" style="background-color: #592919;  border-color: #8B4513;">
+                        <button type="button" class="nav-link active btn  btn-block" data-bs-dismiss="modal" style="background-color: #592919; color: white;">Fechar</button>
+                        <button type="button" class="nav-link active btn  btn-block" onclick="InserirUsuario()" style="background-color: #592919; color: white;">Excluir</button>
                     </div>
 
                 </div>
@@ -191,8 +194,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 
-                <div class="modal-header" style="background-color: #8B4513;  border-color: #8B4513;">
-                    <h1 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h1>
+                <div class="modal-header" style="background-color: #592919;  border-color: #8B4513;">
+                    <h3 class="modal-title" id="exampleModalLabel">Adicionar Cliente</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 
@@ -239,9 +242,9 @@
 
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" onclick="InserirUsuario()">Adicionar</button><!--onclick para chamar a funcao de alteração-->
+                <div class="modal-footer" style="background-color: #592919;  border-color: #8B4513;">
+                    <button type="button" class="nav-link active btn  btn-block" data-bs-dismiss="modal" style="background-color: #592919; color: white;">Fechar</button>
+                    <button type="button" class="nav-link active btn  btn-block" onclick="InserirUsuario()" style="background-color: #592919; color: white;">Adicionar</button><!--onclick para chamar a funcao de alteração-->
                 </div>
             </div>
         </div>
@@ -461,6 +464,15 @@
 
     </script>
 
+</section>
+<!--Butao Voltar-->
+
+<section class="container">
+    <div style="display: flex;">
+        <button type="button" id="send-button2" class="nav-link active btn btn-danger btn-block" style="flex: 1; margin-left: 5px;" onclick="window.location.href = 'index.html';">
+            Voltar
+        </button>
+    </div>
 </section>
 
 </body>

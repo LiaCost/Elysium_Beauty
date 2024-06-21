@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title -->
-    <title>Elora | Personal Portfolio</title>
+    <title>Elysium Beauty</title>
 
     <!-- Inclusão da biblioteca Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -24,6 +24,7 @@
 
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/submenu.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
 
@@ -87,10 +88,42 @@
                 <i class="fa fa-phone-square fa-lg" aria-hidden="true" style="color: chocolate;"></i></i>
                 <a href="#contact" style="margin-left: 10px;">Contato</a>
             </span>
-            <span style="display: flex; align-items: center; margin-right: 20px;">
-                <i class="fa fa-user" aria-hidden="true" style="color: chocolate;"></i>
-                <a href="Login.html" style="margin-left: 10px;">Login</a>
-            </span>
+
+            <div class="dropdown" style="position: relative; display: inline-block;">
+                <span style="display: flex; align-items: center; margin-right: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: chocolate;"></i>
+                    <a href="Login.html" style="margin-left: 10px;">Login</a>
+                </span>
+                <div class="dropdown-content"
+                    style="display: none; position: absolute; background-color: #EAE7DC; width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; padding: 8px; border-radius: 3%; border: #A65F3C solid 1px; box-shadow: 5px #A65F3C;">
+                    <a href="Usuario_Index.html"
+                        style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-users" aria-hidden="true" style="margin-right: 8px;"></i>
+                        Usuarios
+                    </a>
+                    <a href="Agendamento_index.html"
+                        style="padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 8px;"></i>
+                        Agendamento Admin
+                    </a>
+                    <a href="#settings"
+                        style=" padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-calendar" aria-hidden="true" style="margin-right: 8px;"></i>
+                        Agendamento User
+                    </a>
+                    <a href="#settings"
+                        style=" padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-file" aria-hidden="true" style="margin-right: 8px;"></i>
+                        Cadastro Agendamento
+                    </a>
+                    <a href="#logout"
+                        style=" padding: 7px; text-decoration: none; display: flex; align-items: center; margin: 5px;">
+                        <i class="fa fa-align-justify" aria-hidden="true" style="margin-right: 8px;"></i><b></b>
+                        Relatório
+                    </a>
+                </div>
+            </div>
+
             <!-- Menubar -->
             <div class="fas fa-bars" id="menu-btn"></div>
 
@@ -813,7 +846,16 @@
             e.preventDefault();
         });
     </script>
+    <script>
+        // Script to handle the dropdown functionality
+        document.querySelector('.dropdown').addEventListener('mouseover', function () {
+            this.querySelector('.dropdown-content').style.display = 'block';
+        });
 
+        document.querySelector('.dropdown').addEventListener('mouseout', function () {
+            this.querySelector('.dropdown-content').style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>
